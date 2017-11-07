@@ -39,6 +39,7 @@ set listchars=tab:>-,trail:.,space:·
 
 " stuff...
 "set visualbell
+set nowrap
 set showcmd
 set foldmethod=marker
 " activate mouse support
@@ -77,8 +78,13 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+" do not check on file open - because it slows down everything (like reaaally
+" slooooow)
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_w = 0
+" pylint settings
+let g:syntastic_python_pylint_post_args="--disable=broad-except,import-error,line-too-long,logging-format-interpolation"
 """"""""""""""""""""""""""""""""""""
 
 " powerline with pthon3
