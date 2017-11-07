@@ -55,3 +55,27 @@ press __ctrl+v__ to use visual block. This is very handy when you want to edit a
 
 ## Restore / Reopen buffer
 when creating new tabs (__:tabnew__) or new files (__:e__) it can happen that you mix something up and close a buffer which you did not intend. In this case simply call __:buffers__ to list all avialable buffers and restore / reopen one with __:buf__ _[n]_
+
+# Plugins
+tips for usage of some plugins.
+
+<leader> key is set to ","
+
+## A
+switch between .c and .h files
+
+__:A__
+
+## NERDTree
+call it by __:NERDTree__
+
+## Syntastic
+call it by __:SyntasticCheck__
+
+## NERDComment
+__<leader> cc__ comment line
+
+__<leader> c <space>__ toggle line comment
+
+## CtrlP
+bring up a fuzzy search by __CTRL+P__
