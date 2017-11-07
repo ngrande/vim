@@ -53,6 +53,7 @@ let g:clipbrdDefaultReg = '+'
 " buffers
 set nohidden
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
@@ -66,6 +67,18 @@ let g:airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
 "let g:airline_theme='badwolf'
 let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+""""""""""""""""""""""""""""""""""""
 
 " powerline with pthon3
 let g:powerline_pycmd="py3"
@@ -73,21 +86,27 @@ let g:powerline_pycmd="py3"
 " autom. reload files that change on disk
 set autoread
 
+"""""""""""""""""""""""""""""""""""
 " command line completion
 set wildmenu
 set wildmode=list:longest,full
 set wildignore=.git,*.pyc
+"""""""""""""""""""""""""""""""""""
 
 
 highlight MatchParen ctermbg=4
 
+""""""""""""""""""""""""""""""""""
 " spell checking
 if version >= 700
 	set spl=en spell
 	" spellcheck by default off
 	set nospell
 endif
+""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" autocmd
 augroup vimrc
 	autocmd!
 	"·disable vim mouse support
@@ -100,3 +119,4 @@ augroup vimrc
 	autocmd ColorScheme * highlight SpecialKey ctermfg=8
 	autocmd ColorScheme * highlight Comment ctermfg=grey
 augroup END
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
