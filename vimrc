@@ -130,4 +130,9 @@ augroup vimrc
 	autocmd ColorScheme * highlight Comment ctermfg=59
 	autocmd ColorScheme * highlight Normal ctermfg=white
 augroup END
+
+augroup PythonCustom
+	" (syntax) highlight for keyword 'self'
+	autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
+augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
