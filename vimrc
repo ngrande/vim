@@ -27,6 +27,9 @@ syntax enable
 " dont know what this does...
 set grepprg=grep\ -nH\ $*
 
+" set leader key
+let mapleader=","
+
 " indentation and formatting
 set autoindent
 set number

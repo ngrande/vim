@@ -13,6 +13,7 @@ useful vim plugins you can install via the arch repository
 - vim-syntastic
 - vim-fugitive
 - vim-nerdtree
+- vim-nerdcommenter
 - powerline
   - powerline-vim
   - powerline-fonts

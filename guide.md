@@ -42,6 +42,9 @@ by simply pressing __dd__ (2x 'd' key) you delete a complete line
 ### Copy & Pase
 press 2x __y__ for _yanking_ (copying) and then insert your buffer with a __p__ keystroke (_paste_)
 
+#### Paste from clipboard
+press __i__ (switch to _interactive_ mode) and then __SHIFT+V__
+
 #### Visual
 if you want to delete / cut out a whole block press __v__ first (visual edit) or (when __set mouse=a__ is active) by selecting via mouse and then press __c__ for _cutting_
 

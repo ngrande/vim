@@ -19,6 +19,8 @@ sudo pacman -S \
 	vim-spell-en \
 	vim-supertab \
 	vim-syntastic \
+	vim-nerdtree \
+	vim-nerdcommenter \
 	powerline \
 	powerline-vim \
 	powerline-fonts \
