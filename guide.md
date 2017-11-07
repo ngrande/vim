@@ -1,6 +1,8 @@
 # Tips and tricks for using vim
 for vim beginners
 
+_TODO: this file needs more formatting - it does not look pleasant or very structured..._
+
 ## Exit
 one of the first challenges when firing up vim is to close it properly.
 
