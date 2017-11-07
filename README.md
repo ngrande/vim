@@ -21,3 +21,7 @@ useful vim plugins you can install via the arch repository
 nice themes
 
 - [distinguished](https://github.com/Lokaltog/vim-distinguished)
+
+## Intro guide
+a small and very simple intro guide for myself and fellow vim beginners
+[here](guide.md)
