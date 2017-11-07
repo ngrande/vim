@@ -17,7 +17,7 @@ runtime! archlinux.vim
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
 
-colorscheme distinguished
+colorscheme ron
 "colorscheme torte
 
 filetype on
@@ -94,6 +94,9 @@ augroup vimrc
 	autocmd BufEnter * set mouse =
 	" restore cursor pos
 	autocmd BufReadPost * call setpos(".", getpos("'\""))
-	autocmd ColorScheme * highlight LineNr ctermfg=darkgrey
+	" colorscheme adjustments
+	autocmd ColorScheme * highlight LineNr ctermfg=176
+	autocmd ColorScheme * highlight LineNr ctermbg=16
+	autocmd ColorScheme * highlight SpecialKey ctermfg=8
 	autocmd ColorScheme * highlight Comment ctermfg=grey
 augroup END
