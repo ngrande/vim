@@ -5,34 +5,34 @@ for vim beginners
 one of the first challenges when firing up vim is to close it properly.
 
 ### Close wihtout saving
-:q (when no changes were made)
+__:q__ (when no changes were made)
 
-:q! (exclamation mark is used to force)
+__:q!__ (exclamation mark is used to force)
 
 ### Close and save
-:qw (__q__uit and __w__rite)
+__:qw__ (**q**uit and **w**rite)
 
 ## Save changes
-:w (__w__rite changes to disk)
+__:w__ (**w**rite changes to disk)
 
 ### Save changes to another file
-:w [filename]
+__:w__ _[filename]_
 
 ## Using tabs
 ### New tab
-:tabnew
+__:tabnew__
 
 ### Close tab
-:close
+__:close__
 
 ### Switch tabs
-:tabn (next tab)
+__:tabn__ (next tab)
 
-:tabp (previous tab)
+__:tabp__ (previous tab)
 
 ## Editing
 ### Create new file
-:e (start editing - will not create a new file directly but a buffer and later you simply save it via :w)
+__:e__ (start editing - will not create a new file directly but a buffer and later you simply save it via __:w__)
 
 ## Restore / Reopen buffer
-when creating new tabs (:tabnew) or new files (:e) it can happen that you mix something up and close a buffer which you did not intend. In this case simply call :buffers to list all avialable buffers and restore / reopen one with :buf [n]
+when creating new tabs (__:tabnew__) or new files (__:e__) it can happen that you mix something up and close a buffer which you did not intend. In this case simply call __:buffers__ to list all avialable buffers and restore / reopen one with __:buf__ _[n]_
