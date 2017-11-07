@@ -34,5 +34,19 @@ __:tabp__ (previous tab)
 ### Create new file
 __:e__ (start editing - will not create a new file directly but a buffer and later you simply save it via __:w__)
 
+### Delete line
+by simply pressing __dd__ (2x 'd' key) you delete a complete line
+
+### Copy & Pase
+insert your buffer with a __p__ keystroke (_paste_)
+
+#### Visual
+if you want to delete / cut out a whole block press __v__ first (visual edit) or (when __set mouse=a__ is active) by selecting via mouse and then press __c__ for _cutting_
+
+go where you want to insert it and press __p__ for _pasintg_
+
+#### Visual Block
+press __ctrl+v__ to use visual block. This is very handy when you want to edit a specific column (or more) in more than one row.
+
 ## Restore / Reopen buffer
 when creating new tabs (__:tabnew__) or new files (__:e__) it can happen that you mix something up and close a buffer which you did not intend. In this case simply call __:buffers__ to list all avialable buffers and restore / reopen one with __:buf__ _[n]_
