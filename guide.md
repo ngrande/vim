@@ -38,7 +38,7 @@ __:e__ (start editing - will not create a new file directly but a buffer and lat
 by simply pressing __dd__ (2x 'd' key) you delete a complete line
 
 ### Copy & Pase
-insert your buffer with a __p__ keystroke (_paste_)
+press __y__ for _yanking_ (copying) and then insert your buffer with a __p__ keystroke (_paste_)
 
 #### Visual
 if you want to delete / cut out a whole block press __v__ first (visual edit) or (when __set mouse=a__ is active) by selecting via mouse and then press __c__ for _cutting_
