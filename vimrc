@@ -18,6 +18,7 @@ runtime! archlinux.vim
 "let skip_defaults_vim=1
 
 colorscheme distinguished
+"colorscheme torte
 
 filetype on
 filetype plugin on 
@@ -55,7 +56,16 @@ set nohidden
 " airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
-let g:airline_theme='badwolf'
+"let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#syntastic#enabled=1
+let g:airline#extensions#syntastic#error_symbol= 'E:'
+let g:airline#extensions#syntastic#stl_format_err = '%E{[%e(#%fe)]}'
+let g:airline#extensions#syntastic#warning_symbol = 'W:'
+let g:airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
+"let g:airline_theme='badwolf'
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts = 1
 
 " powerline with pthon3
 let g:powerline_pycmd="py3"
@@ -82,6 +92,8 @@ augroup vimrc
 	autocmd!
 	"·disable vim mouse support
 	autocmd BufEnter * set mouse =
+	" restore cursor pos
+	autocmd BufReadPost * call setpos(".", getpos("'\""))
 	autocmd ColorScheme * highlight LineNr ctermfg=darkgrey
 	autocmd ColorScheme * highlight Comment ctermfg=grey
 augroup END
