@@ -127,6 +127,7 @@ augroup vimrc
 	autocmd ColorScheme * highlight LineNr ctermfg=176
 	autocmd ColorScheme * highlight LineNr ctermbg=16
 	autocmd ColorScheme * highlight SpecialKey ctermfg=8
-	autocmd ColorScheme * highlight Comment ctermfg=grey
+	autocmd ColorScheme * highlight Comment ctermfg=59
+	autocmd ColorScheme * highlight Normal ctermfg=white
 augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
