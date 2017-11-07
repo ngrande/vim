@@ -38,10 +38,11 @@ set list
 set listchars=tab:>-,trail:.,space:·
 
 " stuff...
-set visualbell
+"set visualbell
 set showcmd
 set foldmethod=marker
-"set mouse=a
+" activate mouse support
+set mouse=a
 
 " search
 set incsearch
@@ -110,7 +111,7 @@ endif
 augroup vimrc
 	autocmd!
 	"·disable vim mouse support
-	autocmd BufEnter * set mouse =
+	"autocmd BufEnter * set mouse =
 	" restore cursor pos
 	autocmd BufReadPost * call setpos(".", getpos("'\""))
 	" colorscheme adjustments
