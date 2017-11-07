@@ -8,7 +8,21 @@ hl=$(tput smso)
 
 # install vim and plugins from arch repo
 echo "${bold}Installing vim and plugins${normal}"
-sudo pacman -S vim vim-runtime vim-a vim-airline vim-airline-themes vim-ctrlp vim-fugitive vim-jedi vim-spell-de vim-spell-en vim-supertab vim-syntastic powerline powerline-vim powerline-fonts --needed
+sudo pacman -S \
+	vim vim-runtime \
+	vim-a vim-airline \
+	vim-airline-themes \
+	vim-ctrlp \
+	vim-fugitive \
+	vim-jedi \
+	vim-spell-de \
+	vim-spell-en \
+	vim-supertab \
+	vim-syntastic \
+	powerline \
+	powerline-vim \
+	powerline-fonts \
+	--needed
 
 # setup symlinks
 echo "${bold}Setting up symlink for current user - press <ENTER> to continue${normal}"
