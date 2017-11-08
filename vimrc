@@ -9,16 +9,9 @@
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages.
 runtime! archlinux.vim
+"
 
-" If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
-" Or better yet, read /usr/share/vim/vim80/vimrc_example.vim or the vim manual
-" and configure vim to your own liking!
-
-" do not load defaults if ~/.vimrc is missing
-"let skip_defaults_vim=1
-
-"colorscheme ron
-colorscheme torte
+colorscheme Tomorrow-Night-Eighties
 
 filetype on
 filetype plugin on 
@@ -98,6 +91,9 @@ let g:syntastic_python_pylint_post_args="--disable=broad-except,import-error,lin
 " powerline with pthon3
 let g:powerline_pycmd="py3"
 
+" YouCompleteMe is in AUR and compiled with python2 ... so
+let g:ycm_server_python_interpreter="python2"
+
 " autom. reload files that change on disk
 set autoread
 
@@ -121,23 +117,32 @@ endif
 """"""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocmd
-augroup vimrc
+" autocmds
+augroup CustomColors
 	autocmd!
 	"·disable vim mouse support
 	"autocmd BufEnter * set mouse =
 	" restore cursor pos
-	autocmd BufReadPost * call setpos(".", getpos("'\""))
 	" colorscheme adjustments
-	autocmd ColorScheme * highlight LineNr ctermfg=176
-	autocmd ColorScheme * highlight LineNr ctermbg=16
-	autocmd ColorScheme * highlight SpecialKey ctermfg=8
-	autocmd ColorScheme * highlight Comment ctermfg=59
-	autocmd ColorScheme * highlight Normal ctermfg=white
-	autocmd ColorScheme * highlight String ctermfg=154
+	
+	""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+	" DO NOT KNOW WHY BUT THESE DO NOT WORK WHEN NOT DONE IN /etc/vimrc
+	"
+	" autocmd ColorScheme * highlight LineNr ctermfg=176
+	" autocmd ColorScheme * highlight LineNr ctermbg=16
+	" autocmd ColorScheme * highlight SpecialKey ctermfg=8
+	" autocmd ColorScheme * highlight Comment ctermfg=59
+	" autocmd ColorScheme * highlight Normal ctermfg=white
+	" autocmd ColorScheme * highlight String ctermfg=176
+augroup END
+
+augroup SaveCursor
+	autocmd!
+	autocmd BufReadPost * call setpos(".", getpos("'\""))
 augroup END
 
 augroup PythonCustom
+	autocmd!
 	" (syntax) highlight for keyword 'self'
 	autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
 augroup END

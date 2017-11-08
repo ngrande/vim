@@ -1,28 +1,8 @@
 # vim
-my vim setup
+nice and clean vim setup with some plugins
 
-## Archlinux packages
-useful vim plugins you can install via the arch repository
-
-- vim-a
-- vim-airline
-- vim-airline-themes
-- vim-ctrlp
-- vim-jedi
-- vim-supertab
-- vim-syntastic
-- vim-fugitive
-- vim-nerdtree
-- vim-nerdcommenter
-- powerline
-  - powerline-vim
-  - powerline-fonts
-
-
-## Vim Themes
-nice themes
-
-- [distinguished](https://github.com/Lokaltog/vim-distinguished)
+## Setup
+on a clean arch linux installation with yaourt (AUR package manager) one can simply call the [setup script](setup_vim_on_arch.sh). It will create a symlink vimrc -> ~/.vimrc and install all necessary stuff.
 
 ## Intro guide
 a small and very simple intro guide for myself and fellow vim beginners

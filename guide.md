@@ -53,6 +53,12 @@ go where you want to insert it and press __p__ for _pasintg_
 #### Visual Block
 press __ctrl+v__ to use visual block. This is very handy when you want to edit a specific column (or more) in more than one row.
 
+## Split view
+open a split view via __:sp__
+
+or to open a vertical split view __:vsp__
+
+
 ## Restore / Reopen buffer
 when creating new tabs (__:tabnew__) or new files (__:e__) it can happen that you mix something up and close a buffer which you did not intend. In this case simply call __:buffers__ to list all avialable buffers and restore / reopen one with __:buf__ _[n]_
 
