@@ -17,8 +17,8 @@ runtime! archlinux.vim
 " do not load defaults if ~/.vimrc is missing
 "let skip_defaults_vim=1
 
-colorscheme ron
-"colorscheme torte
+"colorscheme ron
+colorscheme torte
 
 filetype on
 filetype plugin on 
@@ -49,7 +49,7 @@ set modeline
 "set visualbell
 set nowrap
 set showcmd
-set foldmethod=marker
+"set foldmethod=marker
 " activate mouse support
 set mouse=a
 
@@ -61,7 +61,7 @@ set hlsearch
 let g:clipbrdDefaultReg = '+'
 
 " buffers
-set nohidden
+"set nohidden
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " airline

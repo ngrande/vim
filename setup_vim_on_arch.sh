@@ -24,6 +24,8 @@ sudo pacman -S \
 	powerline \
 	powerline-vim \
 	powerline-fonts \
+	python-pygit2 \
+	python-psutil \
 	--needed
 
 # setup symlinks
