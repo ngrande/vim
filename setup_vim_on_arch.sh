@@ -16,11 +16,11 @@ sudo pacman -S --needed \
 	vim-airline-themes \
 	vim-ctrlp \
 	vim-fugitive \
-#	vim-jedi \
+	vim-jedi \
 	vim-spell-de \
 	vim-spell-en \
 	vim-supertab \
-#	vim-syntastic \
+	vim-syntastic \
 	vim-nerdtree \
 	vim-nerdcommenter \
 	powerline \
