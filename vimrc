@@ -95,7 +95,7 @@ let g:powerline_pycmd="py3"
 let g:ycm_server_python_interpreter="python2"
 
 " autom. reload files that change on disk
-set autoread
+"set autoread
 
 """""""""""""""""""""""""""""""""""
 " command line completion
