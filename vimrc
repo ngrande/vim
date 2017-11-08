@@ -22,6 +22,7 @@ colorscheme ron
 
 filetype on
 filetype plugin on 
+filetype indent plugin on
 syntax enable
 
 " dont know what this does...
@@ -36,9 +37,13 @@ set number
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set noexpandtab
 set smartcase
 set list
 set listchars=tab:>-,trail:.,space:·
+
+" recognize our modelines
+set modeline
 
 " stuff...
 "set visualbell
@@ -129,6 +134,7 @@ augroup vimrc
 	autocmd ColorScheme * highlight SpecialKey ctermfg=8
 	autocmd ColorScheme * highlight Comment ctermfg=59
 	autocmd ColorScheme * highlight Normal ctermfg=white
+	autocmd ColorScheme * highlight String ctermfg=154
 augroup END
 
 augroup PythonCustom
