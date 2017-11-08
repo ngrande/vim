@@ -7,3 +7,6 @@ on a clean arch linux installation with yaourt (AUR package manager) one can sim
 ## Intro guide
 a small and very simple intro guide for myself and fellow vim beginners
 [here](guide.md)
+
+## Cheatsheet
+or get inspired by this beautiful [cheatsheet](https://devhints.io/vim)
