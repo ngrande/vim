@@ -20,10 +20,12 @@ sudo pacman -S --needed \
 	vim-airline-themes \
 	vim-ctrlp \
 	vim-fugitive \
-	vim-jedi \
+	# can get annoying really quick...
+	#vim-jedi \
 	vim-spell-de \
 	vim-spell-en \
-	vim-supertab \
+	# obsolete by youcompleteme
+	#vim-supertab \
 	vim-syntastic \
 	vim-nerdtree \
 	vim-nerdcommenter \
@@ -32,6 +34,9 @@ sudo pacman -S --needed \
 	powerline-fonts \
 	python-pygit2 \
 	python-psutil \
+
+echo "${bold}Removing vimp plugins that interfere with the above installed ones${normal}"
+sudo pacman -Rs vim-supertab vim-jedi
 
 echo "installation finished"
 

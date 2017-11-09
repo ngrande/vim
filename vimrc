@@ -116,6 +116,17 @@ if version >= 700
 endif
 """"""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""
+" some special key mappings etc.
+
+" prevent * from jumping
+nnoremap * *``
+" prevent # from jumping
+nnoremap # #``
+" press <F2> to jump to end of file and add vim modeline - genius!
+map <F2> Govim: tabstop=4 shiftwidth=4 noexpandtab<ESC>,cc
+""""""""""""""""""""""""""""""""""
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocmds
 augroup CustomColors
