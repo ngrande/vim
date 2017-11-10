@@ -45,6 +45,11 @@ read -n 1 key
 echo ""
 if [ "${key,,}" = "y" ]; then
 	yaourt -S --aur --needed vim-youcompleteme-git vim-tomorrow-theme-git
+	
+	# create symlink for .ycm_extra_conf.py
+	mkdir ~/.vim/
+	ln -sf $(pwd)/dot/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
+
 	print_fin
 fi
 

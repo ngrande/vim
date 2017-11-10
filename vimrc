@@ -91,8 +91,12 @@ let g:syntastic_python_pylint_post_args="--disable=broad-except,import-error,lin
 " powerline with pthon3
 let g:powerline_pycmd="py3"
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YouCompleteMe settings
 " YouCompleteMe is in AUR and compiled with python2 ... so
 let g:ycm_server_python_interpreter="python2"
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " autom. reload files that change on disk
 "set autoread
