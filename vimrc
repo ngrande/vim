@@ -122,17 +122,8 @@ nnoremap # #``
 map <F2> Govim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
 """"""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" autocmds
-"augroup CustomColors
-"    autocmd!
-"    "autocmd ColorScheme * highlight LineNr ctermfg=176
-"    "autocmd ColorScheme * highlight LineNr ctermbg=16
-"    "autocmd ColorScheme * highlight SpecialKey ctermfg=8
-"    "autocmd ColorScheme * highlight Comment ctermfg=59
-"    "autocmd ColorScheme * highlight Normal ctermfg=white
-"    "autocmd ColorScheme * highlight String ctermfg=176
-"augroup END
+" special keys should only be very subtle (colorized)
+highlight SpecialKey ctermfg=8
 
 augroup SaveCursor
 	autocmd!
