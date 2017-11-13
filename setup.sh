@@ -15,28 +15,38 @@ echo "${bold}Installing vim and plugins${normal}"
 sudo pacman -S --needed \
 	vim \
 	vim-runtime \
+	# to switch between header and source file
 	vim-a \
+	# nice status bar
 	vim-airline \
+	# nice themes for status bar
 	vim-airline-themes \
+	# fuzzy file search
 	vim-ctrlp \
+	# for git integration
 	vim-fugitive \
 	# can get annoying really quick...
 	#vim-jedi \
+	# spell checking
 	vim-spell-de \
 	vim-spell-en \
 	# obsolete by youcompleteme
 	#vim-supertab \
-	vim-syntastic \
+	#vim-syntastic \
+	# file tree
 	vim-nerdtree \
+	# toggle comments
 	vim-nerdcommenter \
+	# status bar addition for airline
 	powerline \
 	powerline-vim \
 	powerline-fonts \
+	# opts for powerline
 	python-pygit2 \
 	python-psutil \
 
 echo "${bold}Removing vimp plugins that interfere with the above installed ones${normal}"
-sudo pacman -Rs vim-supertab vim-jedi
+sudo pacman -Rs vim-supertab vim-jedi vim-syntastic
 
 echo "installation finished"
 
@@ -44,7 +54,7 @@ echo "${bold} Installing vim plugins + themes from AUR (via yaourt) - press [y|Y
 read -n 1 key
 echo ""
 if [ "${key,,}" = "y" ]; then
-	yaourt -S --aur --needed vim-youcompleteme-git vim-tomorrow-theme-git
+	pacaur -S --needed vim-youcompleteme-git vim-colorschemes
 	
 	# create symlink for .ycm_extra_conf.py
 	mkdir ~/.vim/
