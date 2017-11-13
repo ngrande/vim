@@ -9,9 +9,9 @@
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages.
 runtime! archlinux.vim
-"
 
-colorscheme Tomorrow-Night-Eighties
+
+colorscheme Tomorrow-Night
 
 filetype on
 filetype plugin on 
@@ -19,10 +19,10 @@ filetype indent plugin on
 syntax enable
 
 " dont know what this does...
-set grepprg=grep\ -nH\ $*
+"set grepprg=grep\ -nH\ $*
 
 " set leader key
-let mapleader=","
+let mapleader="ä"
 
 " indentation and formatting
 set autoindent
@@ -50,9 +50,6 @@ set mouse=a
 set incsearch
 set hlsearch
 
-" linux specific?! dont know what this does
-let g:clipbrdDefaultReg = '+'
-
 " buffers
 "set nohidden
 
@@ -77,16 +74,13 @@ let g:airline_powerline_fonts = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_check_on_open = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-" do not check on file open - because it slows down everything (like reaaally
-" slooooow)
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_w = 0
 " pylint settings
-let g:syntastic_python_pylint_post_args="--disable=broad-except,import-error,line-too-long,logging-format-interpolation"
+let g:syntastic_python_pylint_post_args="--disable=broad-except,import-error,line-too-long,logging-format-interpolation,bad-whitespace,mixed-indentation,invalid-name,missing-docstring,bad-continuation"
 """"""""""""""""""""""""""""""""""""
+
 
 " powerline with pthon3
 let g:powerline_pycmd="py3"
@@ -97,9 +91,6 @@ let g:powerline_pycmd="py3"
 let g:ycm_server_python_interpreter="python2"
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" autom. reload files that change on disk
-"set autoread
 
 """""""""""""""""""""""""""""""""""
 " command line completion
@@ -128,28 +119,20 @@ nnoremap * *``
 " prevent # from jumping
 nnoremap # #``
 " press <F2> to jump to end of file and add vim modeline - genius!
-map <F2> Govim: tabstop=4 shiftwidth=4 noexpandtab<ESC>,cc
+map <F2> Govim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
 """"""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocmds
-augroup CustomColors
-	autocmd!
-	"·disable vim mouse support
-	"autocmd BufEnter * set mouse =
-	" restore cursor pos
-	" colorscheme adjustments
-	
-	""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-	" DO NOT KNOW WHY BUT THESE DO NOT WORK WHEN NOT DONE IN /etc/vimrc
-	"
-	" autocmd ColorScheme * highlight LineNr ctermfg=176
-	" autocmd ColorScheme * highlight LineNr ctermbg=16
-	" autocmd ColorScheme * highlight SpecialKey ctermfg=8
-	" autocmd ColorScheme * highlight Comment ctermfg=59
-	" autocmd ColorScheme * highlight Normal ctermfg=white
-	" autocmd ColorScheme * highlight String ctermfg=176
-augroup END
+"augroup CustomColors
+"    autocmd!
+"    "autocmd ColorScheme * highlight LineNr ctermfg=176
+"    "autocmd ColorScheme * highlight LineNr ctermbg=16
+"    "autocmd ColorScheme * highlight SpecialKey ctermfg=8
+"    "autocmd ColorScheme * highlight Comment ctermfg=59
+"    "autocmd ColorScheme * highlight Normal ctermfg=white
+"    "autocmd ColorScheme * highlight String ctermfg=176
+"augroup END
 
 augroup SaveCursor
 	autocmd!
