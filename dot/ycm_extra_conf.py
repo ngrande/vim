@@ -49,7 +49,8 @@ FLAGS = [
 				'-fdiagnostics-show-option',
 				'-DNDEBUG',
 				# we are cutting edge
-				'-std=c++17',
+				'-stdlib=libstdc++',
+				'-std=c++1z',
 				# THIS IS IMPORTANT! Without the '-x' flag, Clang won't know which language to
 				# use when compiling headers. So it will guess. Badly. So C++ headers will be
 				# compiled as C headers. You don't want that so ALWAYS specify the '-x' flag.
@@ -61,6 +62,7 @@ FLAGS = [
 				# '-isystem', './externals/',
 				# '-isystem', './externals/*/',
 				# '-isystem', './externals/*/*/',
+				'-I /usr/include',
 				'-I externals',
 				'-I externals/*',
 				'-I externals/*/*',
