@@ -126,10 +126,13 @@ map <F2> Govim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " WORKAROUNDS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" special keys should only be very subtle (colorized)
-highlight SpecialKey ctermfg=8
-" detect .c files as cpp because we compile everything as cpp source
-au BufNewFile,BufRead *.c set filetype=cpp
+augroup Gui
+	autocmd!
+	" special keys should only be very subtle (colorized)
+	autocmd BufEnter,BufRead,BufNewFile * highlight SpecialKey ctermfg=8
+	" detect .c files as cpp because we compile everything as cpp source
+	autocmd BufNewFile,BufRead *.c set filetype=cpp
+augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
