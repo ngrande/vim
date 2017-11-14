@@ -61,9 +61,10 @@ FLAGS = [
 				# '-isystem', './externals/',
 				# '-isystem', './externals/*/',
 				# '-isystem', './externals/*/*/',
-				'-I ./externals/*',
-				'-I ./externals/*/*',
-				'-I ./externals/*/*/*',
+				'-I externals',
+				'-I externals/*',
+				'-I externals/*/*',
+				'-I externals/*/*/*',
 ]
 
 # Set this to the absolute path to the folder (NOT the file!) containing the

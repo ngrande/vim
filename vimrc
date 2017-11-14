@@ -40,7 +40,7 @@ set modeline
 
 " stuff...
 "set visualbell
-set nowrap
+set wrap
 set showcmd
 "set foldmethod=marker
 " activate mouse support
