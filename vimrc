@@ -116,9 +116,9 @@ endif
 " some special key mappings etc.
 
 " prevent * from jumping
-nnoremap * #
+nnoremap * *``
 " prevent # from jumping
-nnoremap # *
+nnoremap # #``
 " toggle NERDTree
 map T <ESC><ESC>:NERDTreeToggle<CR>
 " press <F2> to jump to end of file and add vim modeline - genius!
