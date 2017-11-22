@@ -15,33 +15,18 @@ echo "${bold}Installing vim and plugins${normal}"
 sudo pacman -S --needed \
 	vim \
 	vim-runtime \
-	# to switch between header and source file
 	vim-a \
-	# nice status bar
 	vim-airline \
-	# nice themes for status bar
 	vim-airline-themes \
-	# fuzzy file search
 	vim-ctrlp \
-	# for git integration
 	vim-fugitive \
-	# can get annoying really quick...
-	#vim-jedi \
-	# spell checking
 	vim-spell-de \
 	vim-spell-en \
-	# obsolete by youcompleteme
-	#vim-supertab \
-	#vim-syntastic \
-	# file tree
 	vim-nerdtree \
-	# toggle comments
 	vim-nerdcommenter \
-	# status bar addition for airline
 	powerline \
 	powerline-vim \
 	powerline-fonts \
-	# opts for powerline
 	python-pygit2 \
 	python-psutil \
 

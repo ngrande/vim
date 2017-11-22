@@ -108,7 +108,8 @@ highlight MatchParen ctermbg=4
 if version >= 700
 	set spl=en spell
 	" spellcheck by default off
-	set nospell
+	"set nospell
+	set spell
 endif
 """"""""""""""""""""""""""""""""""
 
