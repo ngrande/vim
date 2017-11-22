@@ -119,7 +119,7 @@ nnoremap * #``
 " toggle NERDTree
 map T <ESC><ESC>:NERDTreeToggle<CR>
 " press <F2> to jump to end of file and add vim modeline - genius!
-map <F2> Govim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
+map <F2> Go<CR><ESC>dd0ovim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
 
 nnoremap <C-Up> <C-W><Up>
 nnoremap <C-Down> <C-W><Down>
