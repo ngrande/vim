@@ -35,6 +35,14 @@ set smartcase
 set list
 set listchars=tab:>-,trail:.,space:·
 
+" paths for our externals
+set path+=externals
+set path+=externals/vwd
+set path+=externals/server
+set path+=externals/LIBRARY
+set path+=externals/INCLUDE
+set path+=externals/mdps
+
 " recognize our modelines
 set modeline
 
