@@ -35,6 +35,11 @@ set smartcase
 set list
 set listchars=tab:>-,trail:.,space:·
 
+" highlight current cursor line
+set cursorline
+" highlight column of cursor
+" set cursorcolumn
+
 " paths for our externals
 set path+=externals
 set path+=externals/vwd
