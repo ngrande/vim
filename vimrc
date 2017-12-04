@@ -151,6 +151,7 @@ augroup Gui
 	autocmd!
 	" special keys should only be very subtle (colorized)
 	autocmd BufEnter,BufRead,BufNewFile * highlight SpecialKey ctermfg=8
+	autocmd BufEnter,BufRead,BufNewFile * highlight CursorLineNr ctermfg=black ctermbg=lightgreen
 	" detect .c files as cpp because we compile everything as cpp source
 	autocmd BufNewFile,BufRead *.c set filetype=cpp
 augroup END
