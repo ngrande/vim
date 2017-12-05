@@ -1,11 +1,3 @@
-" All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
-" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
-" you can find below.  If you wish to change any of those settings, you should
-" do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
-" everytime an upgrade of the vim packages is performed.  It is recommended to
-" make changes after sourcing archlinux.vim since it alters the value of the
-" 'compatible' option.
-
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages.
 runtime! archlinux.vim
@@ -18,10 +10,9 @@ filetype plugin on
 filetype indent plugin on
 syntax enable
 
-" dont know what this does...
-"set grepprg=grep\ -nH\ $*
-
 " set leader key
+" german keyboard -> ä is easy to reach and should not be mapped for anything
+" other because it is a weird letter
 let mapleader="ä"
 
 " indentation and formatting
@@ -31,43 +22,37 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set noexpandtab
-set smartcase
 set list
 set listchars=tab:>-,trail:.,space:·
 
 " highlight current cursor line
-set cursorline
+" set cursorline
 " highlight column of cursor
 " set cursorcolumn
-
-" paths for our externals
-set path+=externals
-set path+=externals/vwd
-set path+=externals/server
-set path+=externals/LIBRARY
-set path+=externals/INCLUDE
-set path+=externals/mdps
 
 " recognize our modelines
 set modeline
 
 " stuff...
-"set visualbell
 set wrap
 set showcmd
-"set foldmethod=marker
+set foldmethod=syntax
+" open file unfoleded
+set foldlevelstart=20
 " activate mouse support
 set mouse=a
 
 " search
 set incsearch
 set hlsearch
-
-" buffers
-"set nohidden
+" generally ignore case when searching
+set ignorecase
+" switch to case sensitive search when using a upper case letter
+set smartcase
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " airline
+" always show status line
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 "let g:airline#extensions#hunks#enabled=0
@@ -77,7 +62,6 @@ let g:airline#extensions#syntastic#error_symbol= 'E:'
 let g:airline#extensions#syntastic#stl_format_err = '%E{[%e(#%fe)]}'
 let g:airline#extensions#syntastic#warning_symbol = 'W:'
 let g:airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
-"let g:airline_theme='badwolf'
 let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -110,11 +94,10 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 " command line completion
 set wildmenu
 set wildmode=list:longest,full
-set wildignore=.git,*.pyc
+set wildignore=.git,*.pyc,*.o,*.a,*.swp
 """""""""""""""""""""""""""""""""""
 
 
-highlight MatchParen ctermbg=4
 
 """"""""""""""""""""""""""""""""""
 " spell checking
@@ -128,12 +111,13 @@ endif
 
 """"""""""""""""""""""""""""""""""
 " some special key mappings etc.
+" switch # and * for searching
 nnoremap # *``
 nnoremap * #``
 " toggle NERDTree
-map T <ESC><ESC>:NERDTreeToggle<CR>
+nnoremap T <ESC><ESC>:NERDTreeToggle<CR>
 " press <F2> to jump to end of file and add vim modeline - genius!
-map <F2> Go<CR><ESC>dd0ovim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
+nnoremap <F2> Go<CR><ESC>dd0ovim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
 
 " YCM FixIt
 map <Leader>f :YcmCompleter FixIt<CR>
