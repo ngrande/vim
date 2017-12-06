@@ -1,12 +1,5 @@
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages.
-runtime! archlinux.vim
-
-
 colorscheme Tomorrow-Night
 
-filetype on
-filetype plugin on 
 filetype indent plugin on
 syntax enable
 
@@ -16,7 +9,7 @@ syntax enable
 let mapleader="ä"
 
 " indentation and formatting
-set autoindent
+"set autoindent
 set number
 set tabstop=4
 set shiftwidth=4
@@ -29,9 +22,6 @@ set listchars=tab:>-,trail:.,space:·
 " set cursorline
 " highlight column of cursor
 " set cursorcolumn
-
-" recognize our modelines
-set modeline
 
 " stuff...
 set wrap
@@ -120,7 +110,7 @@ nnoremap T <ESC><ESC>:NERDTreeToggle<CR>
 nnoremap <F2> Go<CR><ESC>dd0ovim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
 
 " YCM FixIt
-map <Leader>f :YcmCompleter FixIt<CR>
+nnoremap <Leader>f :YcmCompleter FixIt<CR>
 
 nnoremap <C-Up> <C-W><Up>
 nnoremap <C-Down> <C-W><Down>
@@ -134,8 +124,8 @@ nnoremap <C-Left> <C-W><Left>
 augroup Gui
 	autocmd!
 	" special keys should only be very subtle (colorized)
-	autocmd BufEnter,BufRead,BufNewFile * highlight SpecialKey ctermfg=8
-	autocmd BufEnter,BufRead,BufNewFile * highlight CursorLineNr ctermfg=black ctermbg=lightgreen
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight CursorLineNr ctermfg=black ctermbg=lightgreen
 	" detect .c files as cpp because we compile everything as cpp source
 	autocmd BufNewFile,BufRead *.c set filetype=cpp
 augroup END
