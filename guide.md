@@ -33,6 +33,15 @@ __:tabn__ (next tab)
 __:tabp__ (previous tab)
 
 ## Editing
+### Change indentation
+__>%__ to indent a curly braces block
+
+__<%__ to unindent a curly braces block
+
+__Vjj>__ to indent a block
+
+__Vjj<__ to unindent a block
+
 ### Create new file
 __:e__ (start editing - will not create a new file directly but a buffer and later you simply save it via __:w__)
 

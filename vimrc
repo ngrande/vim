@@ -95,7 +95,7 @@ if version >= 700
 	set spl=en spell
 	" spellcheck by default off
 	"set nospell
-	set spell
+	set nospell
 endif
 """"""""""""""""""""""""""""""""""
 
@@ -142,5 +142,13 @@ augroup PythonCustom
 	autocmd!
 	" (syntax) highlight for keyword 'self'
 	autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
+augroup END
+
+augroup Templates
+	autocmd!
+	autocmd BufNewFile *.cpp	0r ~/.vim/my_templates/template.cxx
+	autocmd BufNewFile *.cxx	0r ~/.vim/my_templates/template.cxx
+	autocmd BufNewFile *.h		0r ~/.vim/my_templates/template.h
+	autocmd BufNewFile *.py		0r ~/.vim/my_templates/template.py
 augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
