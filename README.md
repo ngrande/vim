@@ -2,7 +2,7 @@
 nice and clean vim setup with some plugins
 
 ## Setup
-on a clean arch linux installation with yaourt (AUR package manager) one can simply call the [setup script](setup.sh). It will create a symlink vimrc -> ~/.vimrc and install all necessary stuff.
+on a clean arch linux installation with _aurman_ (AUR helper) / or simply with pacman and leave the AUR packages out one can simply call the [setup script](setup.sh). It will create a symlink vimrc -> ~/.vimrc and install all necessary stuff.
 
 ## Intro guide
 a small and very simple intro guide for myself and fellow vim beginners

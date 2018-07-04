@@ -35,11 +35,11 @@ sudo pacman -Rs vim-supertab vim-jedi vim-syntastic
 
 echo "installation finished"
 
-echo "${bold} Installing vim plugins + themes from AUR (via yaourt) - press [y|Y] to continue or anything else to skip${normal}"
+echo "${bold} Installing vim plugins + themes from AUR (via aurman) - press [y|Y] to continue or anything else to skip${normal}"
 read -n 1 key
 echo ""
 if [ "${key,,}" = "y" ]; then
-	pacaur -S --needed vim-youcompleteme-git vim-colorschemes
+	aurman -S --needed vim-youcompleteme-git vim-colorschemes
 	
 	# create symlink for .ycm_extra_conf.py
 	mkdir ~/.vim/
