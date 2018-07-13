@@ -146,11 +146,15 @@ augroup END
 
 augroup Templates
 	autocmd!
-	autocmd BufNewFile *.cpp			0r ~/.vim/my_templates/template.cxx
-	autocmd BufNewFile *.cxx			0r ~/.vim/my_templates/template.cxx
-	autocmd BufNewFile *.h				0r ~/.vim/my_templates/template.h
-	autocmd BufNewFile process_*.py		0r ~/.vim/my_templates/process_template.py
-	autocmd BufNewFile poll*.json		0r ~/.vim/my_templates/poller_template.json
-	autocmd BufNewFile dispatch*.json	0r ~/.vim/my_templates/dispatcher_template.json
+	autocmd BufNewFile *.cxx,*.cpp				0r ~/.vim/my_templates/template.cxx
+	autocmd BufNewFile *.h						0r ~/.vim/my_templates/template.h
+	autocmd BufNewFile process_*.py				0r ~/.vim/my_templates/process_template.py
+	autocmd BufNewFile poll*.json				0r ~/.vim/my_templates/poller_template.json
+	autocmd BufNewFile dispatch*.json			0r ~/.vim/my_templates/dispatcher_template.json
+	" clear autocmd buffer
+	" because we might match a second time (already matched with *.cxx or
+	" *.cpp
+	autocmd!
+	autocmd BufNewFile test.cxx,test.cpp,main.cxx,main.cpp 0r ~/.vim/my_templates/test.cpp
 augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
