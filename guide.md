@@ -71,6 +71,17 @@ or to open a vertical split view __:vsp__
 ## Restore / Reopen buffer
 when creating new tabs (__:tabnew__) or new files (__:e__) it can happen that you mix something up and close a buffer which you did not intend. In this case simply call __:buffers__ to list all avialable buffers and restore / reopen one with __:buf__ _[n]_
 
+# Macros
+one powerful feature of vim is the ability to record and execute macros
+## Record
+q<letter><commands>...q
+## Execute
+@<letter> = execute your macro
+
+@@ = execute your macro again
+
+<number>@<letter> = execute your macro <number> times
+
 # Plugins
 tips for usage of some plugins.
 
