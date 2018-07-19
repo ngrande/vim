@@ -107,7 +107,7 @@ nnoremap * #``
 " toggle NERDTree
 nnoremap T <ESC><ESC>:NERDTreeToggle<CR>
 " press <F2> to jump to end of file and add vim modeline - genius!
-nnoremap <F2> Go<CR><ESC>dd0ovim: tabstop=4 shiftwidth=4 noexpandtab<ESC>äcc
+nmap <F2> Go<CR><ESC>dd0ovim: tabstop=4 shiftwidth=4 noexpandtab<ESC><ESC>äcc0<RIGHT>i <ESC>
 
 " YCM FixIt
 nnoremap <Leader>f :YcmCompleter FixIt<CR>
@@ -158,3 +158,5 @@ augroup Templates
 	autocmd BufNewFile test.cxx,test.cpp,main.cxx,main.cpp 0r ~/.vim/my_templates/test.cpp
 augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vim: tabstop=4 shiftwidth=4 noexpandtab
