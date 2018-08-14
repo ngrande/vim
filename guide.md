@@ -82,6 +82,21 @@ q<letter><commands>...q
 
 <number>@<letter> = execute your macro <number> times
 
+## Diff (merging)
+vim can also be used to show diffs between files and then merge those diffs.
+
+vim -d <file> <file>
+
+### Put change
+put a diff from current file (window - where the cursor is) to the other file
+
+dP
+
+### Pull change
+pull a diff from the other file (window - where the cursor is __not__) to the current file
+
+dO
+
 # Plugins
 tips for usage of some plugins.
 
