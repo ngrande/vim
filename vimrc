@@ -154,7 +154,6 @@ augroup Templates
 	" clear autocmd buffer
 	" because we might match a second time (already matched with *.cxx or
 	" *.cpp
-	autocmd!
 	autocmd BufNewFile test.cxx,test.cpp,main.cxx,main.cpp 0r ~/.vim/my_templates/test.cpp
 augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
