@@ -74,7 +74,6 @@ let g:powerline_pycmd="py3"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe settings
-" YouCompleteMe is in AUR and compiled with python2 ... so
 let g:ycm_server_python_interpreter="python3"
 let g:ycm_python_binary_path="python3"
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
