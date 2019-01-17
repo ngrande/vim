@@ -74,6 +74,7 @@ let g:powerline_pycmd="py3"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe settings
+let g:enable_ycm_at_startup = 1
 let g:ycm_server_python_interpreter="python3"
 let g:ycm_python_binary_path="python3"
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
