@@ -32,6 +32,10 @@ set foldlevelstart=20
 " activate mouse support
 set mouse=a
 
+" smoother scrolling
+set ttyfast
+set lazyredraw
+
 " search
 set incsearch
 set hlsearch
@@ -58,14 +62,15 @@ let g:airline_powerline_fonts = 1
 
 """""""""""""""""""""""""""""""""""
 " syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_check_on_open = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-" pylint settings
-let g:syntastic_python_pylint_post_args="--disable=broad-except,import-error,line-too-long,logging-format-interpolation,bad-whitespace,mixed-indentation,invalid-name,missing-docstring,bad-continuation"
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"" pylint settings
+"let g:syntastic_python_pylint_post_args="--disable=broad-except,import-error,line-too-long,logging-format-interpolation,bad-whitespace,mixed-indentation,invalid-name,missing-docstring,bad-continuation"
 """"""""""""""""""""""""""""""""""""
 
 
@@ -74,7 +79,10 @@ let g:powerline_pycmd="py3"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe settings
-let g:enable_ycm_at_startup = 1
+"let g:enable_ycm_at_startup = 1
+"let g:ycm_show_diagnostics_ui = 1
+" set this to 1 to prevent ycm from starting
+"let g:loaded_youcompleteme = 1
 let g:ycm_server_python_interpreter="python3"
 let g:ycm_python_binary_path="python3"
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"

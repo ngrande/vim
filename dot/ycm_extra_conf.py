@@ -50,13 +50,18 @@ flags = [
     '-Iexternals',
     '-Iexternals/INCLUDE',
     '-Iexternals/LIBRARY',
-    '-Iexternals/boost/boost_1_65_0/include/',
+    '-Iexternals/boost/boost_1_68_0/include',
     '-Iexternals/bz2lib/bz2lib/include',
     '-Iexternals/protobuf/protobuf_trunk_20170130/include',
     '-Iexternals/snappy/snappy/include',
-    '-Iexternals/xerces-c/xerces_3_1_1/include/',
+    '-Iexternals/xerces-c/xerces_3_1_1/include',
     '-Iexternals/xzlib/xzlib/include',
     '-Iexternals/zlib/zlib/include',
+    '-Iexternals/gtest/gtest_1_50/include',
+    '-Iexternals/re2/re2-2017-04-21/include',
+    '-Iexternals/*/include',
+    '-Iexternals/*/*/include',
+    '-Iexternals/*/*/*/include',
     '-Wall',
     '-Wextra',
     '-Wno-deprecated',
@@ -66,7 +71,6 @@ flags = [
     '-Wno-write-strings',
     '-m64',
     '-std=gnu++1z',
-    '-I', '../../externals/INCLUDE',
 ]
 
 

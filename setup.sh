@@ -29,6 +29,7 @@ sudo pacman -S --needed \
 	powerline-fonts \
 	python-pygit2 \
 	python-psutil \
+	fzf \
 
 echo "${bold}Removing vimp plugins that interfere with the above installed ones${normal}"
 sudo pacman -Rs vim-supertab vim-jedi vim-syntastic
@@ -39,8 +40,11 @@ echo "${bold} Installing vim plugins + themes from AUR (via aurman) - press [y|Y
 read -n 1 key
 echo ""
 if [ "${key,,}" = "y" ]; then
-	aurman -S --needed vim-youcompleteme-git vim-colorschemes
-	
+	yay -S --needed \
+		vim-youcompleteme-git \
+		vim-colorschemes \
+		vim-fzf-git \
+
 	# create symlink for .ycm_extra_conf.py
 	mkdir ~/.vim/
 	ln -sf $(pwd)/dot/ycm_extra_conf.py ~/.vim/.ycm_extra_conf.py
