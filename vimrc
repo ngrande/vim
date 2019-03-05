@@ -18,6 +18,9 @@ set noexpandtab
 set list
 set listchars=tab:>-,trail:.,space:·
 
+" UI
+set termguicolors
+
 " highlight current cursor line
 " set cursorline
 " highlight column of cursor
@@ -28,7 +31,7 @@ set wrap
 set showcmd
 set foldmethod=syntax
 " open file unfoleded
-set foldlevelstart=20
+"set foldlevelstart=20
 " activate mouse support
 set mouse=a
 
@@ -43,6 +46,13 @@ set hlsearch
 set ignorecase
 " switch to case sensitive search when using a upper case letter
 set smartcase
+
+"""""""""""""""""""""
+" TagList
+let Tlist_Compact_Format = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Close_On_Select = 1
+nnoremap <C-l> :TlistToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " airline
@@ -79,8 +89,7 @@ let g:powerline_pycmd="py3"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe settings
-"let g:enable_ycm_at_startup = 1
-"let g:ycm_show_diagnostics_ui = 1
+let g:ycm_show_diagnostics_ui = 0
 " set this to 1 to prevent ycm from starting
 "let g:loaded_youcompleteme = 1
 let g:ycm_server_python_interpreter="python3"
@@ -133,6 +142,7 @@ augroup Gui
 	autocmd!
 	" special keys should only be very subtle (colorized)
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey guifg=#505050
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight CursorLineNr ctermfg=black ctermbg=lightgreen
 	" detect .c files as cpp because we compile everything as cpp source
 	autocmd BufNewFile,BufRead *.c set filetype=cpp
