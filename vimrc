@@ -104,6 +104,11 @@ set wildmode=list:longest,full
 set wildignore=.git,*.pyc,*.o,*.a,*.swp
 """""""""""""""""""""""""""""""""""
 
+" set dir for .swp files
+" // means to use the absolute path to the file as the swap file name
+" ^= prepends the path to the list of directories
+"set dir^=/tmp//
+
 
 
 """"""""""""""""""""""""""""""""""
@@ -123,8 +128,8 @@ nnoremap # *``
 nnoremap * #``
 " toggle NERDTree
 nnoremap T <ESC><ESC>:NERDTreeToggle<CR>
-" press <F2> to jump to end of file and add vim modeline - genius!
-nmap <F2> Go<CR><ESC>dd0ovim: tabstop=4 shiftwidth=4 noexpandtab<ESC><ESC>äcc0<RIGHT>i <ESC>
+" press <F12> to jump to end of file and add vim modeline - genius!
+nmap <F12> Go<ESC>d0o<ESC>Ivim: tabstop=4 shiftwidth=4 noexpandtab<ESC><ESC>äcc0<RIGHT>i <ESC>
 
 " YCM FixIt
 nnoremap <Leader>f :YcmCompleter FixIt<CR>
