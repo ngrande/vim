@@ -31,7 +31,7 @@ set wrap
 set showcmd
 set foldmethod=syntax
 " open file unfoleded
-"set foldlevelstart=20
+set foldlevelstart=200
 " activate mouse support
 set mouse=a
 
@@ -146,9 +146,14 @@ nnoremap <C-Left> <C-W><Left>
 augroup Gui
 	autocmd!
 	" special keys should only be very subtle (colorized)
-	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
+	"autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey guifg=#505050
-	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight CursorLineNr ctermfg=black ctermbg=lightgreen
+	"autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight CursorLineNr ctermfg=black ctermbg=lightgreen
+	
+	" Make it transparent!
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight LineNr guibg=NONE
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Normal guibg=NONE
+
 	" detect .c files as cpp because we compile everything as cpp source
 	autocmd BufNewFile,BufRead *.c set filetype=cpp
 augroup END
