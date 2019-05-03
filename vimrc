@@ -137,10 +137,15 @@ nmap <F12> Go<ESC>d0o<ESC>Ivim: tabstop=4 shiftwidth=4 noexpandtab<ESC><ESC>äcc
 " YCM FixIt
 nnoremap <Leader>f :YcmCompleter FixIt<CR>
 
+" navigation of splits
 nnoremap <C-Up> <C-W><Up>
 nnoremap <C-Down> <C-W><Down>
 nnoremap <C-Right> <C-W><Right>
 nnoremap <C-Left> <C-W><Left>
+
+" navigation of tabs
+nnoremap <PageUp> :tabp<CR>
+nnoremap <PageDown> :tabn<CR>
 """"""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
