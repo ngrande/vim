@@ -8,6 +8,9 @@ syntax enable
 " other because it is a weird letter
 let mapleader="ä"
 
+" tmux support
+set term=xterm-256color
+
 " indentation and formatting
 "set autoindent
 set number
@@ -145,14 +148,12 @@ nnoremap <C-Left> <C-W><Left>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup Gui
 	autocmd!
-	" special keys should only be very subtle (colorized)
-	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
-	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey guifg=#505050
-	" autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight CursorLineNr ctermfg=black ctermbg=lightgreen
-	
 	" Transparent background!
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight LineNr guibg=NONE
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Normal guibg=NONE
+	" special keys should only be very subtle (colorized)
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey guifg=#505050
 
 	" detect .c files as cpp because we compile everything as cpp source
 	autocmd BufNewFile,BufRead *.c set filetype=cpp
