@@ -10,6 +10,7 @@ let mapleader="ä"
 
 " tmux support
 set term=xterm-256color
+set ttymouse=sgr
 
 " indentation and formatting
 "set autoindent
