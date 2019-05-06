@@ -32,7 +32,7 @@ sudo pacman -S --needed \
 	fzf \
 
 echo "${bold}Removing vimp plugins that interfere with the above installed ones${normal}"
-sudo pacman -Rs vim-supertab vim-jedi vim-syntastic
+sudo pacman -Rs vim-supertab vim-jedi vim-syntastic vim-tagbar vim-taglist
 
 echo "installation finished"
 
