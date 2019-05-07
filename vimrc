@@ -96,6 +96,8 @@ let g:powerline_pycmd="py3"
 let g:ycm_show_diagnostics_ui = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_max_num_candidates = 10
+let g:ycm_max_num_identifier_candidates = 10
 " set this to 1 to prevent ycm from starting
 "let g:loaded_youcompleteme = 1
 let g:ycm_server_python_interpreter="python3"
