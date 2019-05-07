@@ -94,6 +94,8 @@ let g:powerline_pycmd="py3"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe settings
 let g:ycm_show_diagnostics_ui = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 " set this to 1 to prevent ycm from starting
 "let g:loaded_youcompleteme = 1
 let g:ycm_server_python_interpreter="python3"
@@ -120,8 +122,7 @@ set wildignore=.git,*.pyc,*.o,*.a,*.swp
 if version >= 700
 	set spl=en spell
 	" spellcheck by default off
-	"set nospell
-	set nospell
+	" set nospell
 endif
 """"""""""""""""""""""""""""""""""
 
