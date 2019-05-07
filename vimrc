@@ -124,7 +124,7 @@ set wildignore=.git,*.pyc,*.o,*.a,*.swp
 if version >= 700
 	set spl=en spell
 	" spellcheck by default off
-	" set nospell
+	set nospell
 endif
 """"""""""""""""""""""""""""""""""
 
