@@ -160,6 +160,8 @@ augroup Gui
 	" Transparent background!
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight LineNr guibg=NONE
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Normal guibg=NONE
+	" nicer parentheses matching color
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight MatchParen guifg=#F92772 guibg=#EAEAEA
 
 	" detect .c files as cpp because we compile everything as cpp source
 	autocmd BufNewFile,BufRead *.c set filetype=cpp
