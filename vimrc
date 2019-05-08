@@ -181,6 +181,13 @@ augroup PythonCustom
 	autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
 augroup END
 
+augroup Automation
+	autocmd!
+	" automatically remove tailing spaces / tabs when saving
+	" ! limit this to files where i am sure this will not do harm!
+	autocmd BufWritePre *.cxx,*.cpp,*.h,*.hpp,*.tpp,*.hxx,*.py %s/\s\+$//e
+augroup END
+
 augroup Templates
 	autocmd!
 	autocmd BufNewFile *.cxx,*.cpp						0r ~/.vim/vwd_templates/vwd_template.cxx
