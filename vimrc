@@ -33,7 +33,7 @@ set termguicolors
 " stuff...
 set wrap
 set showcmd
-set foldmethod=syntax
+set foldmethod=manual
 " open file unfoleded
 set foldlevelstart=200
 " activate mouse support
