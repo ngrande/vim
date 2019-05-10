@@ -33,6 +33,7 @@ set termguicolors
 " stuff...
 set wrap
 set showcmd
+" Synatx folding is extremely slow...
 set foldmethod=manual
 " open file unfoleded
 set foldlevelstart=200
