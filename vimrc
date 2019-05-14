@@ -22,6 +22,9 @@ set noexpandtab
 set list
 set listchars=tab:>-,trail:.,space:·
 
+" number formats: only detect bin and hex - not oct!
+set nrformats="bin,hex"
+
 " UI
 set termguicolors
 
