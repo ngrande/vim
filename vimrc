@@ -74,7 +74,8 @@ let g:airline#extensions#syntastic#error_symbol= 'E:'
 let g:airline#extensions#syntastic#stl_format_err = '%E{[%e(#%fe)]}'
 let g:airline#extensions#syntastic#warning_symbol = 'W:'
 let g:airline#extensions#syntastic#stl_format_err = '%W{[%w(#%fw)]}'
-let g:airline_theme='powerlineish'
+"let g:airline_theme='powerlineish'
+let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
