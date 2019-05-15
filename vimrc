@@ -163,6 +163,8 @@ augroup Gui
 	" special keys should only be very subtle (colorized)
 	"autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey guifg=#505050
+	" adjust highlight of cursorline
+	autocmd BufEnter,Bufread,BufNewFile,ColorScheme * highlight CursorLine cterm=none term=none gui=none
 	" Transparent background!
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight LineNr guibg=NONE
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Normal guibg=NONE
