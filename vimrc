@@ -164,12 +164,15 @@ augroup Gui
 	"autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey guifg=#505050
 	" adjust highlight of cursorline
-	autocmd BufEnter,Bufread,BufNewFile,ColorScheme * highlight CursorLine cterm=none term=none gui=none
+	" autocmd BufEnter,Bufread,BufNewFile,ColorScheme * highlight CursorLine cterm=none term=none gui=none
+	" clear hi of CursorLine
+	autocmd BufEnter,Bufread,BufNewFile,ColorScheme * highlight clear CursorLine
+	autocmd BufEnter,Bufread,BufNewFile,ColorScheme * highlight CursorLineNr term=bold cterm=bold gui=bold guifg=#FF6347
 	" Transparent background!
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight LineNr guibg=NONE
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Normal guibg=NONE
 	" nicer parentheses matching color
-	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight MatchParen guifg=#F92772 guibg=#EAEAEA
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight MatchParen guifg=#FF6347 guibg=#EAEAEA
 
 	" detect .c files as cpp because we compile everything as cpp source
 	autocmd BufNewFile,BufRead *.c set filetype=cpp
