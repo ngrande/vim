@@ -1,5 +1,5 @@
-"colorscheme Tomorrow-Night
-colorscheme monokai
+colorscheme Tomorrow-Night
+"colorscheme monokai
 
 filetype indent plugin on
 syntax enable
@@ -171,9 +171,15 @@ augroup Gui
 	" Transparent background!
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight LineNr guibg=NONE
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Normal guibg=NONE
+	""""""""""""""""""""""""""""""""""
+	" CHANGES ONLY FOR COLORSCHEME MONOKAI
+	"""""""""""""""""""""""""""""""""""
+		autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Comment guifg=#907d57
+"		autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Special guifg=#A6E22E
+	"""""""""""""""""""""""""""""""""""
 	" nicer parentheses matching color
-	"autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight MatchParen guifg=#FF6347 guibg=#EAEAEA
-	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight MatchParen gui=reverse term=reverse cterm=reverse
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight MatchParen guifg=#FF6347 guibg=#EAEAEA
+	"autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight MatchParen gui=reverse term=reverse cterm=reverse
 
 	" detect .c files as cpp because we compile everything as cpp source
 	autocmd BufNewFile,BufRead *.c set filetype=cpp
