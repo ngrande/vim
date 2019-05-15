@@ -30,7 +30,7 @@ set nrformats="bin,hex"
 set termguicolors
 
 " highlight current cursor line
-" set cursorline
+set cursorline
 " highlight column of cursor
 " set cursorcolumn
 
