@@ -1,5 +1,5 @@
-colorscheme Tomorrow-Night
-"colorscheme monokai
+"colorscheme Tomorrow-Night
+colorscheme monokai
 
 filetype indent plugin on
 syntax enable
@@ -175,7 +175,7 @@ augroup Gui
 	" CHANGES ONLY FOR COLORSCHEME MONOKAI
 	"""""""""""""""""""""""""""""""""""
 		autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Comment guifg=#907d57
-"		autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Special guifg=#A6E22E
+		autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight Special guifg=#8ad000
 	"""""""""""""""""""""""""""""""""""
 	" nicer parentheses matching color
 	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight MatchParen guifg=#FF6347 guibg=#EAEAEA
