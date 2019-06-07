@@ -100,9 +100,9 @@ let g:powerline_pycmd="py3"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YouCompleteMe settings
 let g:ycm_show_diagnostics_ui = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_max_num_candidates = 10
+"let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_max_num_candidates = 30
 let g:ycm_max_num_identifier_candidates = 10
 " set this to 1 to prevent ycm from starting
 "let g:loaded_youcompleteme = 1
@@ -200,7 +200,7 @@ augroup PythonCustom
 augroup END
 
 augroup Automation
-	autocmd!
+	autocmd! 
 	" automatically remove tailing spaces / tabs when saving
 	" ! limit this to files where i am sure this will not do harm!
 	autocmd BufWritePre *.cxx,*.cpp,*.h,*.hpp,*.tpp,*.hxx,*.py %s/\s\+$//e

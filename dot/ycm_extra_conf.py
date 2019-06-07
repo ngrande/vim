@@ -65,6 +65,8 @@ flags = [
     '-Iexternals/zlib/zlib/include',
     '-Iexternals/gtest/gtest_1_50/include',
     '-Iexternals/re2/re2-2017-04-21/include',
+    '-Iexternals/libkafka-asio/libkafka-asio-0.2.0/lib',
+    '-Iexternals/librdkafka/librdkafka-1.0.0/include',
     '-Wall',
     '-Wextra',
     '-Wno-deprecated',
