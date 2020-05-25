@@ -211,8 +211,8 @@ augroup Templates
 	autocmd BufNewFile *.cxx,*.cpp						0r ~/.vim/vwd_templates/vwd_template.cxx
 	autocmd BufNewFile *.h								0r ~/.vim/vwd_templates/vwd_template.h
 	autocmd BufNewFile process_*.py						0r ~/.vim/vwd_templates/process_template.py
-	autocmd BufNewFile poll*.json						0r ~/.vim/vwd_templates/poller_template.json
-	autocmd BufNewFile dispatch*.json,process*.json		0r ~/.vim/vwd_templates/dispatcher_template.json
+	autocmd BufNewFile *poll*.json						0r ~/.vim/vwd_templates/poller_template.json
+	autocmd BufNewFile *dispatch*.json					0r ~/.vim/vwd_templates/dispatcher_template.json
 	" clear autocmd buffer
 	" because we might match a second time (already matched with *.cxx or
 	" *.cpp
