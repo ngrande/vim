@@ -24,6 +24,7 @@ sudo pacman -S --needed \
 	vim-spell-en \
 	vim-nerdtree \
 	vim-nerdcommenter \
+	vim-fugitive \
 	powerline \
 	powerline-vim \
 	powerline-fonts \
