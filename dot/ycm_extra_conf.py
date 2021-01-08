@@ -75,7 +75,7 @@ flags = [
     '-Wno-unused-local-typedefs',
     '-Wno-write-strings',
     '-m64',
-    '-std=gnu++1z',
+    '-std=gnu++2a',
 ]
 
 
