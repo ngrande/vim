@@ -1,5 +1,5 @@
-"colorscheme Tomorrow-Night
-colorscheme monokai
+colorscheme Tomorrow-Night-Eighties
+"colorscheme Monokai
 
 filetype indent plugin on
 syntax enable
