@@ -1,6 +1,7 @@
 "colorscheme Tomorrow-Night-Eighties
 "colorscheme Monokai
-colorscheme molokai_dark
+"colorscheme molokai_dark
+colorscheme murphy
 
 filetype indent plugin on
 syntax enable
@@ -163,8 +164,8 @@ nnoremap <C-Left> <C-W><Left>
 augroup Gui
 	autocmd!
 	" special keys should only be very subtle (colorized)
-	"autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
-	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey guifg=#505050
+	autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey ctermfg=8
+	"autocmd BufEnter,BufRead,BufNewFile,ColorScheme * highlight SpecialKey guifg=#505050
 	" adjust highlight of cursorline
 	" autocmd BufEnter,Bufread,BufNewFile,ColorScheme * highlight CursorLine cterm=none term=none gui=none
 	" clear hi of CursorLine
